@@ -1,15 +1,18 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-
+import { ViewTransitions } from 'astro:transitions';
+import '../styles/global.css';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" transition:animate="slide">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<title>Astro</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<ViewTransitions />
 	</head>
 	<body>
 		<Header />
@@ -46,6 +49,5 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
 			</p>
 		</main>
-		<Footer />
 	</body>
 </html>
