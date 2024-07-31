@@ -1,21 +1,10 @@
 ---
 import Header from '../components/Header.astro';
-import { ViewTransitions } from 'astro:transitions';
-import '../styles/global.css';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<title>Astro</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<ViewTransitions />
-	</head>
-	<body>
-		<Header />
+<Layout>
+	<Header />
 		<main>
 			<h1>🧑‍🚀 Hello, Astronaut!</h1>
 			<p>
@@ -49,5 +38,4 @@ import '../styles/global.css';
 				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
 			</p>
 		</main>
-	</body>
-</html>
+</Layout>
